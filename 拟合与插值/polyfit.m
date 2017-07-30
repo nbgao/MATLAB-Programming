@@ -14,4 +14,4 @@ f = fittype('a*cos(k*t)*exp(w*t)','independent','t','coefficients',{'a','k','w'}
 cfun = fit(x,y,f)
 xi = 0:0.1:20;
 yi = cfun(xi);
-plot(x,y,'r*',xi,yi,'b-');
+plot(x,y,'ro',xi,yi,'b-');
