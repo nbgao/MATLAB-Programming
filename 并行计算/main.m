@@ -1,0 +1,12 @@
+fun = inline('x(1)^4 - 16*x(1)^2 - 5*x(1) + x(2)^4-16*x(2)^2-5*x(2)','x');
+l = [-5 -5];
+u = [5 5];
+x0 = [0 0];
+x1 = [-0.5,-1];
+kmax = 500;
+q = 1;
+tolf = 1e-9;
+[xos,fos] = fminsearch(fun,x0)
+[xls,fls] = fminsearch(fun,x1)
+[xo_sa,fo_sa] = simanlopt(fun,x0,l,u,tolf,kmax,q)
+[xl_sa,fl_sa] = simanlopt(fun,x1,l,u,tolf,kmax,q)
