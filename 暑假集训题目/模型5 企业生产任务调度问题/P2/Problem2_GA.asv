@@ -1,0 +1,9 @@
+clc
+
+Max_gene = 10000;
+popsize = 11;
+chromlength = 50;
+pc = 0.9;
+pm = 0.05;
+
+[S_best,M] = GA2(Max_gene,popsize,chromlength,pc,pm);
