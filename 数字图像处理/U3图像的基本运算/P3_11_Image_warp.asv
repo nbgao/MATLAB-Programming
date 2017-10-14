@@ -1,0 +1,15 @@
+I = imread('../IMAGE/Lena.tiff');
+TransformMat1 = affine2d([cosd(30) sind(30) 0;
+                        -sind(30) cosd(30) 0;
+                                0   0      1]);
+TransformMat1 = affine2d([0 0 0;
+                          0 0 0;
+                          0 0 1]);
+TransformMat1 = affine2d([cosd(30) sind(30) 0;
+                        -sind(30) cosd(30) 0;
+                                0   0      1]);                            
+J1 = imwarp(I, TransformMat1);
+
+figure;
+subplot(2,2,1); imshow(I);
+subplot(2,2,2); imshow(J1);
